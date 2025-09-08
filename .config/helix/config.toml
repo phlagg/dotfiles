@@ -1,0 +1,37 @@
+
+
+theme = "nosferatu"
+
+[editor]
+line-number = "relative"
+completion-replace = true
+
+[keys.normal]
+C-g = [
+    ":write-all", 
+    ":new", 
+    ":insert-output lazygit", 
+    ":buffer-close!", 
+    ":redraw", 
+    ":reload-all"
+]
+C-b = [":buffer-close"]
+
+
+"A-down" = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "paste_after",
+  "select_mode",
+  "goto_line_start",
+  "normal_mode",
+] # Move line(s) down
+"A-up" = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_up",
+  "paste_before",
+  "flip_selections",
+] # Move line(s) up
+
+ g = { o = ":open \"%%P\"|altfile<ret>" }

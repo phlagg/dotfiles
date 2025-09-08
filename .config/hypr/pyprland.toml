@@ -1,0 +1,14 @@
+# /* ----------- 💫 https://github.com/JaKooLit 💫 -------- */ #
+
+[pyprland]
+
+plugins = [
+  "scratchpads",
+]
+
+[scratchpads.term]
+animation = "fromTop"
+command = "kitty --class kitty-dropterm"
+class = "kitty-dropterm"
+size = "40% 50%"
+margin = 35
