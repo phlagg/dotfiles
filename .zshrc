@@ -25,6 +25,7 @@ alias down='cd ~/Downloads'
 alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
 alias ls='eza --icons=auto --tree -L=1'
 alias dir='ls --group-directories-first'    
+alias lg='lazygit'
 #  This is your file 
 # Add your configurations here
 if command -v zoxide > /dev/null; then
