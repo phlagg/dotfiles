@@ -7,14 +7,31 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "base_keymap": "VSCode",
+  "minimap": {
+    "show": "never",
+    "current_line_highlight": "line",
+    "thumb": "hover"
+  },
+  "scrollbar": {
+    "show": "system",
+    "cursors": true,
+    "axes": {
+      "horizontal": false
+    }
+  },
   "icon_theme": "Bearded Icon Theme",
-  "ui_font_size": 16,
-  "buffer_font_size": 14,
+  "ui_font_size": 15,
+  "buffer_font_size": 13.0,
   "theme": {
     "mode": "system",
     "light": "Duskfox",
-    "dark": "Duskfox"
+    "dark": "Nosferatu"
   },
-  "vim_mode": true,
+  "helix_mode": true,
   "relative_line_numbers": true
 }

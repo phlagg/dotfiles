@@ -34,4 +34,27 @@ C-b = [":buffer-close"]
   "flip_selections",
 ] # Move line(s) up
 
- g = { o = ":open \"%%P\"|altfile<ret>" }
+C-right = "move_next_word_start"
+C-left = "move_prev_word_end"
+S-right = "extend_char_right"
+S-left = "extend_char_left"
+S-up = "extend_line_up"
+S-down = "extend_line_down"
+
+[keys.insert]
+C-right = "move_next_word_start"
+C-left = "move_prev_word_end"
+S-right = "extend_char_right"
+S-left = "extend_char_left"
+S-up = "extend_line_up"
+S-down = "extend_line_down"
+
+[keys.select]
+C-right = "extend_next_word_start"
+C-left = "extend_prev_word_end"
+S-right = "extend_char_right"
+S-left = "extend_char_left"
+S-up = "extend_line_up"
+S-down = "extend_line_down"
+
+g = { o = ":open \"%%P\"|altfile<ret>" }
