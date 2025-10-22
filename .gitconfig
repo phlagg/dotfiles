@@ -1,0 +1,16 @@
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[user]
+	name = Michael Woods
+	email = michaelthomaswoods@gmail.com
+[credential "https://github.com"]
+	helper = 
+	helper = !/home/phlagg/.local/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/home/phlagg/.local/bin/gh auth git-credential
+[init]
+	defaultBranch = main
