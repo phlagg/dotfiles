@@ -71,5 +71,59 @@
     "bindings": {
       "ctrl-d": "vim::SelectNext"
     }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-insert": null
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "copy": null
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-c": "editor::Copy"
+    }
+  },
+  {
+    "context": "vim_mode == waiting",
+    "bindings": {
+      "ctrl-v": null
+    }
+  },
+  {
+    "context": "vim_mode == replace",
+    "bindings": {
+      "ctrl-v": null
+    }
+  },
+  {
+    "context": "vim_mode == insert",
+    "bindings": {
+      "ctrl-v": null
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "shift-delete": null
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-x": "editor::Cut"
+    }
+  },
+  {
+    "context": "((vim_mode == helix_normal || vim_mode == helix_select) && !menu)",
+    "bindings": {
+      "ctrl-v": "editor::Paste"
+    }
   }
 ]
