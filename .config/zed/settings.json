@@ -49,7 +49,6 @@
    "rounded_selection": true,
    "soft_wrap": "none",
    "preferred_line_length": 110,
-   "tab_size": 3,
    "cursor_shape": "bar",
    "cursor_blink": true,
 
@@ -224,6 +223,7 @@
          "tab_size": 2,
       },
       "C": {
+         "auto_indent_on_paste": true,
          "inlay_hints": {
             "enabled": true,
             "show_value_hints": true,
@@ -234,7 +234,7 @@
             "allowed": false,
          },
          "preferred_line_length": 120,
-         "auto_indent": "none",
+         "auto_indent": "syntax_aware",
          "format_on_save": "off",
          "linked_edits": true,
          "show_edit_predictions": true,
