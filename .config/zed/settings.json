@@ -1,4 +1,5 @@
 // Zed settings
+
 //
 // For information on how to configure Zed, see the Zed
 // documentation: https://zed.dev/docs/configuring-zed
@@ -6,62 +7,391 @@
 // To see all of Zed's default settings without changing your
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
-{
-  "ui_font_family": "IntoneMono Nerd Font",
-  "buffer_font_family": "IntoneMono Nerd Font",
-  "tab_bar": {
-    "show_nav_history_buttons": false
-  },
-  "collaboration_panel": {
-    "button": false
-  },
-  "project_panel": {
-    "indent_size": 15.0
-  },
-  "inline_code_actions": true,
-  "gutter": {
-    "min_line_number_digits": 3
-  },
-  "outline_panel": {
-    "indent_size": 20.0,
-    "dock": "right"
-  },
-  "telemetry": {
-    "diagnostics": false,
-    "metrics": false
-  },
-  "base_keymap": "VSCode",
-  "minimap": {
-    "show": "never",
-    "current_line_highlight": "line",
-    "thumb": "hover"
-  },
-  "scrollbar": {
-    "show": "system",
-    "cursors": true,
-    "axes": {
-      "horizontal": false
-    }
-  },
-  "icon_theme": "Bearded Icon Theme",
-  "ui_font_size": 15,
-  "buffer_font_size": 14.0,
-  "theme": {
-    "mode": "system",
-    "light": "Duskfox",
-    "dark": "Nosferatu"
-  },
-  "helix_mode": true,
-  "relative_line_numbers": "enabled",
 
-  "languages": {
-    "C": {
-      "format_on_save": "on"
-    },
-    "C++": {
-      "auto_indent": "syntax_aware",
-      "hard_tabs": false,
-      "tab_size": 4
-    }
-  }
+{
+   // ─── Font & Layout ─────────────────────────────────────────────
+   "diff_view_style": "split",
+   "cli_default_open_behavior": "existing_window",
+   "agent_servers": {
+      "github-copilot": {
+         "type": "registry",
+      },
+   },
+   "agent": {
+      "sidebar_side": "right",
+      "dock": "right",
+      "default_model": {
+         "provider": "copilot_chat",
+         "model": "gpt-5-mini",
+      },
+      "favorite_models": [],
+      "model_parameters": [],
+   },
+   "disable_ai": false,
+   "completions": {
+      "lsp": true,
+      "lsp_insert_mode": "insert",
+   },
+   "colorize_brackets": false,
+   "git": {
+      "hunk_style": "unstaged_hollow",
+   },
+   "buffer_font_size": 14.0,
+   "buffer_font_family": "IntoneMono Nerd Font Mono",
+   "buffer_font_weight": 370.0,
+   "buffer_line_height": { "custom": 1.4 },
+   "agent_buffer_font_size": 14.0,
+   "ui_font_family": "IntoneMono Nerd Font",
+   "ui_font_size": 15.0,
+   "ui_font_weight": 370,
+   "vertical_scroll_margin": 20.0,
+   "zoomed_padding": true,
+   "rounded_selection": true,
+   "soft_wrap": "none",
+   "preferred_line_length": 110,
+   "tab_size": 3,
+   "cursor_shape": "bar",
+   "cursor_blink": true,
+
+   // ─── Panels & UI Elements ──────────────────────────────────────
+   "toolbar": {
+      "quick_actions": true,
+      "code_actions": false,
+   },
+   "tabs": {
+      "file_icons": true,
+      "git_status": true,
+      "show_diagnostics": "errors",
+   },
+   "tab_bar": {
+      "show_nav_history_buttons": false,
+      "show": true,
+   },
+   "title_bar": {
+      "show_branch_status_icon": true,
+      "show_onboarding_banner": true,
+      "show_branch_name": true,
+   },
+   "status_bar": {
+      "active_language_button": true,
+      "line_endings_button": true,
+   },
+   "search": {
+      "button": true,
+   },
+   "scrollbar": {
+      "cursors": true,
+      "show": "auto",
+   },
+   "minimap": {
+      "show": "never",
+   },
+   "indent_guides": {
+      "coloring": "indent_aware",
+      "background_coloring": "disabled",
+   },
+   "gutter": {
+      "min_line_number_digits": 3,
+      "line_numbers": true,
+      "runnables": true,
+      "breakpoints": true,
+      "folds": true,
+   },
+
+   // File Finder Settings
+   "file_finder": {
+      "file_icons": true, // Show/hide file icons
+      "modal_max_width": "small", // Horizontal size: small, medium, large, xlarge, full
+      "include_ignored": "smart", // gitignored files in results: true, false, null
+   },
+
+   // ─── Panels: Docked Views ──────────────────────────────────────
+   "bottom_dock_layout": "contained",
+   "debugger": {
+      "dock": "bottom",
+   },
+   "project_panel": {
+      "dock": "left",
+      "hide_hidden": false,
+      "indent_size": 15.0,
+      "hide_root": false,
+      "entry_spacing": "standard",
+      "button": true,
+   },
+   "collaboration_panel": {
+      "button": false,
+      "dock": "right",
+   },
+   "outline_panel": {
+      "dock": "right",
+   },
+   "git_panel": {
+      "scrollbar": { "show": "auto" },
+      "collapse_untracked_diff": false,
+      "sort_by": "name",
+      "status_style": "icon",
+      "button": true,
+      "dock": "left",
+   },
+
+   // ─── Editing & Language Features ───────────────────────────────
+   "inline_code_actions": true,
+   "hover_popover_enabled": true,
+   "edit_predictions": {
+      "provider": "zed",
+      "disabled_globs": [],
+      "mode": "subtle",
+   },
+   "tasks": {
+      "prefer_lsp": true,
+   },
+   "diagnostics_max_severity": "hint",
+   "diagnostics": {
+      "inline": {
+         "enabled": false,
+      },
+   },
+   "inlay_hints": {
+      "show_other_hints": false,
+      "show_background": false,
+      "show_type_hints": false,
+      "enabled": false,
+      "show_parameter_hints": false,
+      "show_value_hints": true,
+   },
+   "show_signature_help_after_edits": true,
+   "auto_signature_help": true,
+   "relative_line_numbers": "enabled",
+   "helix_mode": true,
+   "base_keymap": "VSCode",
+   "snippet_sort_order": "inline", // Snippets completions: top, inline, bottom, none
+   "show_completions_on_input": true, // Show completions while typing
+   "show_completion_documentation": true, // Show documentation in completions
+   "lsp_document_colors": "inlay", // none, inlay, border, background
+
+   // ─── Terminal ──────────────────────────────────────────────────
+   "terminal": {
+      "dock": "bottom",
+      "font_weight": 330.0,
+      "font_size": 14,
+      "line_height": "standard",
+      "shell": "system",
+      "blinking": "on",
+   },
+
+   // ─── Theme & Icons ─────────────────────────────────────────────
+   "icon_theme": "Bearded Icon Theme",
+   "theme": {
+      "mode": "system",
+      "light": "Nosferatu",
+      "dark": "Nosferatu",
+   },
+
+   // ─── File Types ────────────────────────────────────────────────
+   "file_types": {
+      "C": ["c", "h"],
+   },
+
+   // ─── Language-Specific Settings ────────────────────────────────
+   "languages": {
+      "YAML": {
+         "show_whitespaces": "trailing",
+         "indent_guides": {
+            "background_coloring": "disabled",
+         },
+         "hard_tabs": false,
+         "tab_size": 3,
+      },
+      "Go": {
+         "inlay_hints": {
+            "enabled": true,
+            "show_value_hints": true,
+         },
+         "auto_indent": "syntax_aware",
+         "tab_size": 3,
+      },
+      "CMake": {
+         "inlay_hints": {
+            "enabled": true,
+            "show_value_hints": true,
+         },
+         "enable_language_server": true,
+         "preferred_line_length": 120,
+         "soft_wrap": "prefer_line",
+         "tab_size": 2,
+      },
+      "JSON": {
+         "tab_size": 2,
+      },
+      "C": {
+         "inlay_hints": {
+            "enabled": true,
+            "show_value_hints": true,
+         },
+         "use_on_type_format": true,
+         "tab_size": 4,
+         "prettier": {
+            "allowed": false,
+         },
+         "preferred_line_length": 120,
+         "auto_indent": "none",
+         "format_on_save": "off",
+         "linked_edits": true,
+         "show_edit_predictions": true,
+         // "language_servers": ["clangd"]
+      },
+      "Python": {
+         "tab_size": 4,
+         "language_servers": ["basedpyright", "ruff", "!pyright", "!pylance", "!ty"],
+         "format_on_save": "on",
+         "formatter": [
+            { "language_server": { "name": "ruff" } },
+            { "code_action": "source.fixAll.ruff" },
+            // { "code_action": "source.organizeImports.ruff" },
+         ],
+         "inlay_hints": {
+            "enabled": false,
+            "show_value_hints": false,
+         },
+         "show_completions_on_input": true,
+      },
+   },
+
+   // ─── LSP Configuration ─────────────────────────────────────────
+   "lsp": {
+      "ruff": {
+         "initialization_options": {
+            "settings": {
+               "exclude": [".venv"],
+               "configurationPreference": "editorFirst",
+               "lineLength": 120,
+               "preview": true,
+               "fixall": true,
+               "fixable": [],
+               "ignore": [],
+               "lint": {
+                  "ignore": ["N999"],
+               },
+               "configuration": {},
+               "format": {
+                  "quote-style": "single",
+                  "lineEnding": "auto",
+                  "indent": "auto",
+                  "wrap": "auto",
+               },
+            },
+         },
+      },
+      "basedpyright": {
+         "settings": {
+            "exclude": [".venv"],
+            "basedpyright.analysis": {
+               "diagnosticMode": "workspace",
+               "inlayHints": {
+                  "callArgumentNames": false,
+               },
+               "typeCheckingMode": "standard",
+               "ignore": ["**/__pycache__",".venv"]
+            },
+         },
+      },
+      "pyright": {
+         "settings": {
+            "python.analysis": {
+               "autoImportCompletions": true,
+               "typeCheckingMode": "standard",
+            },
+         },
+      },
+      "gopls": {
+         "initialization_options": {
+            "hints": {
+               "assignVariableTypes": false,
+               "parameterNames": false,
+               "functionTypeParameters": true,
+               "compositeLiteralFields": true,
+               "compositeLiteralTypes": true,
+               "constantValues": true,
+               "rangeVariableTypes": true,
+            },
+         },
+      },
+      "yaml-language-server": {
+         "settings": {
+            "yaml": {
+               "customTags": [
+                  "!And scalar",
+                  "!And mapping",
+                  "!And sequence",
+                  "!If scalar",
+                  "!If mapping",
+                  "!If sequence",
+                  "!Not scalar",
+                  "!Not mapping",
+                  "!Not sequence",
+                  "!Equals scalar",
+                  "!Equals mapping",
+                  "!Equals sequence",
+                  "!Or scalar",
+                  "!Or mapping",
+                  "!Or sequence",
+                  "!FindInMap scalar",
+                  "!FindInMap mapping",
+                  "!FindInMap sequence",
+                  "!Base64 scalar",
+                  "!Base64 mapping",
+                  "!Base64 sequence",
+                  "!Cidr scalar",
+                  "!Cidr mapping",
+                  "!Cidr sequence",
+                  "!Ref scalar",
+                  "!Ref mapping",
+                  "!Ref sequence",
+                  "!Sub scalar",
+                  "!Sub mapping",
+                  "!Sub sequence",
+                  "!GetAtt scalar",
+                  "!GetAtt mapping",
+                  "!GetAtt sequence",
+                  "!GetAZs scalar",
+                  "!GetAZs mapping",
+                  "!GetAZs sequence",
+                  "!ImportValue scalar",
+                  "!ImportValue mapping",
+                  "!ImportValue sequence",
+                  "!Select scalar",
+                  "!Select mapping",
+                  "!Select sequence",
+                  "!Split scalar",
+                  "!Split mapping",
+                  "!Split sequence",
+                  "!Join scalar",
+                  "!Join mapping",
+                  "!Join sequence",
+                  "!Condition scalar",
+                  "!Condition mapping",
+                  "!Condition sequence",
+               ],
+            },
+         },
+      },
+   },
+
+   // ─── System Integration ────────────────────────────────────────
+   "wsl_connections": [
+      {
+         "distro_name": "Ubuntu-22.04",
+         "user": null,
+         "projects": [
+            { "paths": ["/home/michael/repositories/odomatic"] },
+            { "paths": ["/home/michael/repositories/odomatic-test-server/./"] },
+         ],
+      },
+   ],
+
+   // ─── Telemetry ─────────────────────────────────────────────────
+   "telemetry": {
+      "diagnostics": false,
+      "metrics": false,
+   },
 }
