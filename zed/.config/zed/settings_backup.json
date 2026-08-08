@@ -1,0 +1,67 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "ui_font_family": "IntoneMono Nerd Font",
+  "buffer_font_family": "IntoneMono Nerd Font",
+  "tab_bar": {
+    "show_nav_history_buttons": false
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "project_panel": {
+    "indent_size": 15.0
+  },
+  "inline_code_actions": true,
+  "gutter": {
+    "min_line_number_digits": 3
+  },
+  "outline_panel": {
+    "indent_size": 20.0,
+    "dock": "right"
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "base_keymap": "VSCode",
+  "minimap": {
+    "show": "never",
+    "current_line_highlight": "line",
+    "thumb": "hover"
+  },
+  "scrollbar": {
+    "show": "system",
+    "cursors": true,
+    "axes": {
+      "horizontal": false
+    }
+  },
+  "icon_theme": "Bearded Icon Theme",
+  "ui_font_size": 15,
+  "buffer_font_size": 14.0,
+  "theme": {
+    "mode": "system",
+    "light": "Duskfox",
+    "dark": "Nosferatu"
+  },
+  "helix_mode": true,
+  "relative_line_numbers": "enabled",
+
+  "languages": {
+    "C": {
+      "format_on_save": "on"
+    },
+    "C++": {
+      "auto_indent": true,
+      "hard_tabs": false,
+      "tab_size": 4
+    }
+  }
+}
