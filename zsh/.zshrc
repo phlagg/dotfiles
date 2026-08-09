@@ -1,50 +1,37 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+#            _
+#    _______| |__  _ __ ___
+#   |_  / __| '_ \| '__/ __|
+#  _ / /\__ \ | | | | | (__
+# (_)___|___/_| |_|_|  \___|
+#
+# -----------------------------------------------------
+# ML4W zshrc loader
+# -----------------------------------------------------
+
+# DON'T CHANGE THIS FILE
+
+# You can define your custom configuration by adding
+# files in ~/.config/zshrc
+# or by creating a folder ~/.config/zshrc/custom
+# with copies of files from ~/.config/zshrc
+# You can also create a .zshrc_custom file in your home directory
+# -----------------------------------------------------
+
+# -----------------------------------------------------
+# Load modular configuration
+# -----------------------------------------------------
+
+for f in ~/.config/zshrc/*; do
+    if [ ! -d $f ]; then
+        c=`echo $f | sed -e "s=.config/zshrc=.config/zshrc/custom="`
+        [[ -f $c ]] && source $c || source $f
+    fi
+done
+
+# -----------------------------------------------------
+# Load single customization file (if exists)
+# -----------------------------------------------------
+
+if [ -f ~/.zshrc_custom ]; then
+    source ~/.zshrc_custom
 fi
-
-# Add user configurations here
-# For HyDE not to touch your beloved configurations,
-# we added 2 files to the project structure:
-# 1. ~/.hyde.zshrc - for customizing the shell related hyde configurations
-# 2. ~/.zshenv - for updating the zsh environment variables handled by HyDE // this will be modified across updates
-
-#  Plugins 
-# oh-my-zsh plugins are loaded  in ~/.hyde.zshrc file, see the file for more information
-
-#  Aliases 
-# Add aliases here
-# # Directory navigation shortcuts
-alias ..='cd ..'
-alias ...='cd ../..'
-alias .3='cd ../../..'
-alias .4='cd ../../../..'
-alias .5='cd ../../../../..'
-
-alias lazyman='bash ~/.config/kittypadding.sh'
-alias hx='helix'
-alias home='cd ~/'
-alias proj='cd ~/Projects'
-alias docs='cd ~/Documents'
-alias down='cd ~/Downloads'
-alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
-alias ls='eza --icons=auto --tree -L=1'
-alias dir='ls --group-directories-first'    
-alias lg='lazygit'
-#  This is your file 
-# Add your configurations here
-if command -v zoxide > /dev/null; then
-  eval "$(zoxide init zsh)"
-fi
-
-export PATH=$PATH:/usr/local/go/bin
-GOPATH=$HOME/go  PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - zsh)"
