@@ -1,0 +1,12 @@
+/* -----------------------------------------------------
+ * Import Matugen Colors
+ * ----------------------------------------------------- */
+@import '../../../../../.config/waybar/colors.css';
+@define-color accent @primary;
+
+@define-color icon_color @accent;
+@define-color border_color @accent;
+@define-color background transparent;
+@define-color on_surface @accent;
+
+@import '../style.css';
