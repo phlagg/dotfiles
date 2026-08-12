@@ -1,5 +1,3 @@
-# /* ----------- 💫 https://github.com/JaKooLit 💫 -------- */ #
-
 [pyprland]
 
 plugins = [
@@ -10,5 +8,5 @@ plugins = [
 animation = "fromTop"
 command = "kitty --class kitty-dropterm"
 class = "kitty-dropterm"
-size = "40% 50%"
+size = "40% 40%"
 margin = 35
