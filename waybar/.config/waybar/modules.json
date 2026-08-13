@@ -21,14 +21,14 @@
     },
     "persistent-only": true,
     "persistent-workspaces": {
-      "HDMI-A-1": [1, 3],
-      "DP-2": [2, 4]
+      "HDMI-A-1": [3, 4],
+      "DP-2": [1, 2]
     }
   },
   // Taskbar
   "wlr/taskbar": {
     "format": "{icon}",
-    "icon-size": 18,
+    "icon-size": 14,
     "tooltip-format": "{title}",
     "on-click": "activate",
     "on-click-middle": "close",

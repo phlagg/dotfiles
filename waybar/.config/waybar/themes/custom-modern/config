@@ -3,8 +3,8 @@
     "layer": "top",
     "margin-top": 0,
     "margin-bottom": 0,
-    "margin-left": 0,
-    "margin-right": 0,
+    "margin-left": 30,
+    "margin-right": 30,
     "spacing": 0,
     // Load Modules
     "include": [
@@ -13,17 +13,18 @@
     ],
     // Modules Left
     "modules-left": [
-        "custom/appmenu",
+        //"custom/appmenu",
         "hyprland/workspaces",
         //"wlr/taskbar",
         //"group/quicklinks",
         //"custom/nowplaying",
-        "custom/empty",
+        //"custom/empty",
         "hyprland/window",
+        "custom/empty",
     ],
     // Modules Center
     "modules-center": [
-        "custom/empty",
+        //"custom/empty",
         "clock"
     ],
     // Modules Right

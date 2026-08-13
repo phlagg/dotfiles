@@ -27,7 +27,7 @@
 	"FeedMaxItems": 5,
 	"SaveWindowLayout": false,
 	"LeftProportion": 4,
-	"Transparent": false,
+	"Transparent": true,
 	"PackageColumnWidth": 0,
 	"EnableAutoSuggest": false,
 	"SepDepsWithNewLine": true
