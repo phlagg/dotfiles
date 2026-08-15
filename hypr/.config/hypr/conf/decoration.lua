@@ -1,2 +1,2 @@
-local name = "rounding.lua"
+local name = "default.lua"
 load_variant(name,"decorations")
