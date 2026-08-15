@@ -8,5 +8,5 @@ plugins = [
 animation = "fromTop"
 command = "kitty --class kitty-dropterm"
 class = "kitty-dropterm"
-size = "40% 40%"
+size = "1000px 700px"
 margin = 35
