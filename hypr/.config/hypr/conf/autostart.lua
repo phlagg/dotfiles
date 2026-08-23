@@ -50,6 +50,8 @@ hl.on("hyprland.start", function ()
 
     hl.exec_cmd("pypr &")
 
+    hl.exec_cmd("udiskie &")
+
     hl.exec_cmd("solaar --window=hide")
     -- Load cliphist history
     hl.exec_cmd("wl-paste --watch cliphist store")

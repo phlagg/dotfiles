@@ -41,10 +41,10 @@ hl.bind(mainMod .. " + ALT + up", hl.dsp.window.resize({ x = 0, y = -100, relati
 hl.bind(mainMod .. " + G", hl.dsp.group.toggle(), { description = "Toggle window group" })
 -- hl.bind(mainMod .. " + SHIFT + G", hl.dsp.group.active("f"), { description = "Switch to next group window" })
 hl.bind(mainMod .. " + K", hl.dsp.layout("swapsplit"), { description = "Swapsplit" })
-hl.bind(mainMod .. " + SHIFT + left", hl.dsp.window.swap({ direction = "l" }), { description = "Swap tiled window left" })
-hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.swap({ direction = "r" }), { description = "Swap tiled window right" })
-hl.bind(mainMod .. " + SHIFT + up", hl.dsp.window.swap({ direction = "u" }), { description = "Swap tiled window up" })
-hl.bind(mainMod .. " + SHIFT + down", hl.dsp.window.swap({ direction = "d" }), { description = "Swap tiled window down" })
+hl.bind(mainMod .. " + SHIFT + left", hl.dsp.window.move({ direction = "l" }), { description = "Swap tiled window left" })
+hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.move({ direction = "r" }), { description = "Swap tiled window right" })
+hl.bind(mainMod .. " + SHIFT + up", hl.dsp.window.move({ direction = "u" }), { description = "Swap tiled window up" })
+hl.bind(mainMod .. " + SHIFT + down", hl.dsp.window.move({ direction = "d" }), { description = "Swap tiled window down" })
 
 -- Actions
 hl.bind(mainMod .. " + CTRL + R", hl.dsp.exec_cmd("hyprctl reload"), { description = "Reload Hyprland configuration" })
