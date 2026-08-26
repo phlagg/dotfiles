@@ -126,6 +126,7 @@
     "dock": "right",
   },
   "git_panel": {
+    "group_by": "none",
     "tree_view": true,
     "scrollbar": { "show": "auto" },
     "collapse_untracked_diff": false,

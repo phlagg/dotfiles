@@ -35,9 +35,3 @@ include colors-matugen.conf
 # Include Custom Configuration
 # Create the file custom.conf in ~/.config/kitty to overwrite the default configuration
 include $HOME/.config/kitty/custom.conf
-
-
-# BEGIN_KITTY_THEME
-# Colors-Matugen
-include current-theme.conf
-# END_KITTY_THEME

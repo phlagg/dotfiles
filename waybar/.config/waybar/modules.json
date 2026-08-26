@@ -21,8 +21,8 @@
     },
     "persistent-only": true,
     "persistent-workspaces": {
-      "HDMI-A-1": [3, 4],
-      "DP-2": [1, 2],
+      "HDMI-A-1": [1, 2],
+      "DP-2": [3, 4],
       "eDP-1":[1,2]
     }
   },
