@@ -163,7 +163,7 @@
     "show_value_hints": true,
   },
   "show_signature_help_after_edits": true,
-  "auto_signature_help": true,
+  "auto_signature_help": false,
   "relative_line_numbers": "enabled",
   "helix_mode": true,
   "base_keymap": "VSCode",
